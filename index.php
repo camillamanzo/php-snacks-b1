@@ -15,26 +15,26 @@ $squadre = array (
     array(
         "uno" => "squadraTre",
         "due" => "squadraQuattro",
-        "puntiUno" => 22,
-        "puntiDue" => 18
+        "puntiUno" => 12,
+        "puntiDue" => 32
     ),
     array(
         "uno" => "squadraCinque",
         "due" => "squadraSei",
-        "puntiUno" => 22,
-        "puntiDue" => 18
+        "puntiUno" => 34,
+        "puntiDue" => 56
     ),
     array(
         "uno" => "squadraSette",
         "due" => "squadraOtto",
-        "puntiUno" => 22,
+        "puntiUno" => 12,
         "puntiDue" => 18
     ),
     array(
         "uno" => "squadraNove",
         "due" => "squadraDieci",
-        "puntiUno" => 22,
-        "puntiDue" => 18
+        "puntiUno" => 56,
+        "puntiDue" => 34
     )
   );
   
@@ -50,15 +50,25 @@ $squadre = array (
     <title>snack one</title>
 </head>
 <body>
-<pre>
+    <pre>
 
-    <?php 
-        print_r($squadre); 
-        var_dump($squadre);
-    ?>
+        <?php 
+            print_r($squadre); 
+            var_dump($squadre);
+        ?>
 
-</pre>
+    </pre>
 
+    <ul>
+        <?php foreach($squadre as $squadra){ ?>
+        <li>
+            <?php echo $squadra["uno"]; ?>
+            <?php echo $squadra["due"]; ?>
+            <?php echo $squadra["puntiUno"]; ?>
+            <?php echo $squadra["puntiDue"]; ?>
+        </li>
+        <?php } ?>
+    </ul>
  
     
 </body>
